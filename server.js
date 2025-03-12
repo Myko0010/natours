@@ -25,12 +25,12 @@ mongoose
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, '0.0.0.0', () => {
-  console.log(`Server is running on port ${port}`);
+  //console.log(`Server is running on port ${port}`);
 });
 
 process.on('unhandledRejection', err => {
-  console.log('UNHANDLER Rejection 🌟 Shutting down....');
-  console.log(err.name, err.message);
+  //console.log('UNHANDLER Rejection 🌟 Shutting down....');
+  //console.log(err.name, err.message);
   server.close(() => {
     process.exit(1);
   });

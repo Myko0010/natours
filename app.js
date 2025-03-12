@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./Utils/appError.js');
 const globalErrorHandler = require('./controllers/errorController.js');
@@ -88,6 +89,8 @@ app.use(
 );
 //serving static files
 //app.use(express.static(`${__dirname}/public/`));
+
+app.use(compression());
 
 //Test Middleware
 app.use((req, res, next) => {
